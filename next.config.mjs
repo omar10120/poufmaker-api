@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  swcMinify: true,
+  output: 'standalone',
   experimental: {
-    serverComponentsExternalPackages: ['@prisma/client']
+    serverActions: true,
   },
+  swcMinify: true,
   async rewrites() {
     return [
       {
